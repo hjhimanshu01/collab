@@ -1,0 +1,53 @@
+html
+  head
+    meta(charset='utf-8')
+    title collab
+    style
+      include ../public/css/styles.css
+    body
+      div(id="cursors")
+    canvas(id="paper" width="1900" height="800") 
+    div(id="sidebar" style="width:400px")
+      div(class="w3-main" style="margin-right:400px")
+    
+      
+        
+    div(id="mySidebar" class="sidebar")
+      div(id="sidebar" style="margin-right:400px")
+        div(id="chat"  )
+          button.btn-default.btn-primary(class = "chuyap" href="javascript:void(0)" onclick="closeNav()") Close Chat
+          button.btn-default.btn-primary( class = "chuyap-chat" )   Messenger
+          div(id="chat-window" )
+            div(id="output" )
+            div(id="feedback" placeholder="Messages here")
+          input(id="handle" type="text" placeholder=" Name ")
+          input(id="message" type="text" placeholder="Message")
+          button.btn-default.btn-primary(id="send" style="text:center ") Send
+      
+      
+    footer
+      input(type="text" id = "url" value= "#{fullUrl} " style="display:none")
+      div(class = "share-buttons")
+        button( id= "share-link" onclick="copy_url()" ) Share Link
+        button.btn-default.btn-primary(class="send-message" onclick="openNav()") Send a Message to Community Members
+      p(id='onlineCounter' href='')  Connected Members: 0
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.4/socket.io.js")
+    script(src="../bower_components/jquery/dist/jquery.min.js")
+    script(src="public/js/script.js")
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
+    script.
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "350px";
+        document.getElementById("main").style.marginLeft = "350px";
+        }
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        } 
+
+      function copy_url() {
+        var copyText = document.getElementById("url");
+        copyText.select();
+          document.execCommand("copy");
+        }

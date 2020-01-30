@@ -1,0 +1,12 @@
+{
+  "name": "collab",
+  "description": "",
+  "main": "app.js",
+  "authors": ["collab"],
+  "homepage": "",
+  "moduleType": [],
+  "ignore": ["**/.*", "node_modules", "bower_components"],
+  "dependencies": {
+    "jquery": "^2.2.2"
+  }
+}

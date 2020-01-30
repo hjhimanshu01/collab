@@ -1,0 +1,27 @@
+{
+  "name": "collab",
+  "version": "1.0.0",
+  "description": "collab",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [],
+  "author": "hj",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "bower": "^1.8.8",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "jade": "^1.11.0",
+    "jquery": "^3.3.1",
+    "passport": "^0.4.0",
+    "passport-auth0": "^1.1.0",
+    "pug": "^2.0.3",
+    "socket.io": "^2.2.0"
+  }
+}
